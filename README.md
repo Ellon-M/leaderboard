@@ -33,7 +33,7 @@
 - [📝 License](#license)
 
 
-# 📖 To Do List <a name="about-project"></a>
+# 📖 Leaderboard <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
