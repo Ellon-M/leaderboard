@@ -110,8 +110,8 @@ Feel free to check the [issues page](../../issues/).
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add CSS styling]**
-- [ ] **[Implement a DELETE method]**
+- [ ] **Add CSS styling**
+- [ ] **Implement a DELETE method**
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
