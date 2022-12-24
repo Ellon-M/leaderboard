@@ -35,7 +35,7 @@ export default class Leaderboard {
       this.scoresTable.innerHTML = '';
       scores.sort((a, b) => a.score - b.score).forEach((score) => {
         this.scoresTable.innerHTML += `
-        <p>
+        <p class="score-inner">
           <span>${score.user}</span>
           <span>${score.score}</span>
         </p>
