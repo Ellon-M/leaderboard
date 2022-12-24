@@ -10,6 +10,9 @@ module.exports = {
   devServer: {
     static: './dist',
   },
+  experiments: {
+    topLevelAwait: true
+  },
   module: {
     rules: [
       {

@@ -5,6 +5,7 @@ export default class Leaderboard {
     this.refresh = document.querySelector('.refresh-btn');
     this.submit = document.getElementById('submit-new-score');
     this.message = document.querySelector('.message');
+    this.scoresTable = document.querySelector('.scores-table-data');
     this.scores = [];
   }
 
@@ -30,8 +31,18 @@ export default class Leaderboard {
     });
 
     // get request
-    this.refresh.addEventListener('click', () => {
-      this.getAllScores();
+    this.refresh.addEventListener('click', async () => {
+      const scores = await this.getAllScores();
+      this.scoresTable.innerHTML = '';
+      console.log(scores);
+      scores.sort((a, b) => a.score - b.score).forEach((score) => {
+        this.scoresTable.innerHTML += `
+        <p>
+          <span>${score.user}</span>
+          <span>${score.score}</span>
+        </p>
+      `
+      })
     });
   }
 
@@ -42,7 +53,7 @@ export default class Leaderboard {
          Accept: 'application/json',
          'Content-Type': 'application/json',
        },
-       body: JSON.stringify({ name: "Ellon's Game" }),
+       body: JSON.stringify({ name: "Ellon's New Game" }),
      });
 
      const id = await response.json();
@@ -50,15 +61,13 @@ export default class Leaderboard {
    }
 
   getAllScores = async () => {
-    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/POn30IaK9AvWMr91XHqc/scores/');
+    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/5HY3pDVyPqBNmP5MFxu9/scores/');
     const scores = await response.json();
-    scores.result.forEach((score) => {
-      this.scores.push(score);
-    });
+    return scores.result;
   }
 
   setScore = async (name, score) => {
-    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/POn30IaK9AvWMr91XHqc/scores/', {
+    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/5HY3pDVyPqBNmP5MFxu9/scores/', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -66,7 +75,7 @@ export default class Leaderboard {
       },
       body: JSON.stringify({
         user: name,
-        score,
+        score: score,
       }),
     });
 
