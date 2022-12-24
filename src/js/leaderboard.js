@@ -6,7 +6,6 @@ export default class Leaderboard {
     this.submit = document.getElementById('submit-new-score');
     this.message = document.querySelector('.message');
     this.scoresTable = document.querySelector('.scores-table-data');
-    this.scores = [];
   }
 
   start() {
@@ -34,15 +33,14 @@ export default class Leaderboard {
     this.refresh.addEventListener('click', async () => {
       const scores = await this.getAllScores();
       this.scoresTable.innerHTML = '';
-      console.log(scores);
       scores.sort((a, b) => a.score - b.score).forEach((score) => {
         this.scoresTable.innerHTML += `
         <p>
           <span>${score.user}</span>
           <span>${score.score}</span>
         </p>
-      `
-      })
+      `;
+      });
     });
   }
 
@@ -75,7 +73,7 @@ export default class Leaderboard {
       },
       body: JSON.stringify({
         user: name,
-        score: score,
+        score,
       }),
     });
 

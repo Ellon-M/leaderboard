@@ -11,7 +11,7 @@ module.exports = {
     static: './dist',
   },
   experiments: {
-    topLevelAwait: true
+    topLevelAwait: true,
   },
   module: {
     rules: [
