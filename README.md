@@ -106,6 +106,15 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Add CSS styling**
+- [ ] **Implement a DELETE method**
+
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>

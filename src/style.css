@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *,
 ::before,
 ::after {
@@ -13,10 +15,21 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: 'Inter', sans-serif;
 }
 
 a {
   text-decoration: none;
+}
+
+.input-vals {
+  width: 50%;
+  margin: 10px;
+  padding: 6px;
+}
+
+input:focus {
+  background-color: #e6e6e6;
 }
 
 .header {
@@ -31,4 +44,52 @@ a {
 .top {
   align-self: flex-start;
   padding: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.scores-table {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.scores-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.scores-form-heading {
+  font-size: 27px;
+}
+
+.message {
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#submit-new-score {
+  width: 100px;
+  font-size: 14px;
+  padding: 8px 30px;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+}
+
+tr > span {
+  padding: 44px;
 }
