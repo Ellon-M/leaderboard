@@ -60,7 +60,8 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link]()
+<!-- - [Live Demo Link]() -->
+Coming Soon..
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,7 +85,7 @@ A web browser of choice.
 
 Clone this repository to your desired folder:
  
-- Use the `git clone` command with this [link]()
+- Use the `git clone` command with this [link](https://github.com/Ellon-M/leaderboard.git)
 - On the terminal, inside the desired folder's directory, run `npm install` to install all the necessary depandancies.
 - run `npm start` to execute the code and serve it on the browser.
 
@@ -125,7 +126,7 @@ If you like this project please give it as star.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
-https://github.com/MohamedHNoor/unit-test-practice/issues/1
+
 <!-- ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > Give credit to everyone who inspired your codebase.
